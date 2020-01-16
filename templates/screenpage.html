@@ -1,0 +1,21 @@
+{% extends "baselayout.html" %}
+{% block c %}
+	<div>
+		<h3>Recent posts:<h3>
+	</div>
+
+	{% for post in posts %}
+		<div class="media">
+			<div class="media-left">
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading">{{ post.author }} <small><i>Posted on {{ post.date_posted }}</i></small></h4>
+				<p>{{ post.content }}</p>
+			</div>
+		</div>
+
+	{% endfor %}
+<p>Make new post</p>
+<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+</div>
+{% endblock %}
